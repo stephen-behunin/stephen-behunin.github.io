@@ -5,84 +5,110 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stephen Behunin — Resume</title>
 <meta name="description" content="Stephen Behunin — resume and professional documents.">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #1a1f2b;
-    --ink-soft: #5a6272;
-    --line: #e6e8ee;
-    --accent: #2456d6;
-    --accent-dark: #1a41a8;
-    --bg: #ffffff;
-    --bg-soft: #f7f8fa;
+    --ink: #e6e7e9;
+    --ink-soft: #94979d;
+    --line: #2b2d31;
+    --accent: #aeb4bd;
+    --bg: #17181a;
+    --bg-soft: #1f2023;
+    --bg-card: #1b1c1f;
+    --white: #f4f5f6;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     color: var(--ink);
     background: var(--bg);
-    line-height: 1.6;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
   }
+  ::selection { background: rgba(244, 245, 246, 0.2); }
   .wrap {
     max-width: 680px;
     margin: 0 auto;
     padding: 0 24px;
   }
   header {
-    padding: 88px 0 40px;
+    padding: 88px 0 44px;
+  }
+  .kicker {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
   }
   h1 {
-    font-size: 2.1rem;
+    font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
+    font-size: 2.3rem;
     font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 6px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 16px;
+    line-height: 1.15;
   }
   .tagline {
-    font-size: 1.05rem;
+    font-size: 0.98rem;
     color: var(--ink-soft);
-    max-width: 52ch;
+    max-width: 62ch;
   }
   .actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 28px;
+    gap: 10px;
+    margin-top: 30px;
   }
   .btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 11px 20px;
-    border-radius: 8px;
-    font-size: 0.95rem;
+    padding: 12px 20px;
+    border-radius: 3px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.78rem;
     font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     text-decoration: none;
-    transition: background 0.15s ease, border-color 0.15s ease;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
     border: 1px solid transparent;
   }
   .btn-primary {
-    background: var(--accent);
-    color: #fff;
+    background: var(--white);
+    color: #131416;
   }
-  .btn-primary:hover { background: var(--accent-dark); }
+  .btn-primary:hover { background: #d7d9dc; }
   .btn-secondary {
-    background: var(--bg);
+    background: transparent;
     color: var(--ink);
     border-color: var(--line);
   }
-  .btn-secondary:hover { border-color: var(--ink-soft); }
+  .btn-secondary:hover {
+    border-color: var(--accent);
+    background: var(--bg-soft);
+  }
   section {
-    padding: 36px 0;
+    padding: 38px 0;
     border-top: 1px solid var(--line);
   }
   h2 {
-    font-size: 0.8rem;
-    font-weight: 700;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.09em;
+    letter-spacing: 0.22em;
     color: var(--ink-soft);
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
   .doc-list {
     list-style: none;
@@ -95,92 +121,106 @@
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    padding: 14px 18px;
+    padding: 15px 18px;
     border: 1px solid var(--line);
-    border-radius: 10px;
+    border-radius: 3px;
     text-decoration: none;
     color: var(--ink);
-    background: var(--bg);
+    background: var(--bg-card);
     transition: border-color 0.15s ease, background 0.15s ease;
   }
   .doc-list a:hover {
     border-color: var(--accent);
     background: var(--bg-soft);
   }
-  .doc-name { font-weight: 600; font-size: 0.98rem; }
+  .doc-name {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    font-size: 0.98rem;
+    letter-spacing: 0.02em;
+  }
+  .doc-sub {
+    display: block;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    margin-top: 2px;
+  }
   .doc-meta {
-    font-size: 0.85rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
     color: var(--ink-soft);
     white-space: nowrap;
   }
   footer {
     padding: 40px 0 64px;
     border-top: 1px solid var(--line);
-    font-size: 0.88rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
     color: var(--ink-soft);
   }
   footer a { color: var(--ink-soft); }
+  footer a:hover { color: var(--white); }
   @media (max-width: 480px) {
     header { padding-top: 56px; }
-    h1 { font-size: 1.7rem; }
+    h1 { font-size: 1.75rem; }
     .actions { flex-direction: column; }
     .btn { justify-content: center; }
   }
 </style>
 </head>
 <body>
-
 <div class="wrap">
-
   <header>
+    <p class="kicker">Data Science // Analytics</p>
     <h1>Stephen Behunin</h1>
-    <!-- Data Scientist with 4.5 years of experience delivering reporting systems in healthcare claims auditing, compliance, and pre-audit analytics. Built a Tableau analytics program from the ground up into four BI products supporting a $10M+ ARR platform with 100+ custom reports and a 35%+ buy-through rate. Owned the long-term product strategy and project roadmaps while working autonomously to drive initiatives from concept to delivery. Cultivated lasting client relationships and translated unique customer needs into accurate, trusted and customized reporting. -->
-    <p class="tagline">You can view my resume and other professional documents below.</p>
-
+    <p class="tagline">Data Scientist with 4.5 years of experience delivering reporting systems in healthcare claims auditing, compliance, and pre-audit analytics. Built a Tableau analytics program from the ground up into four BI products supporting a $10M+ ARR platform with 100+ custom reports and a 35%+ buy-through rate. Owned the long-term product strategy and project roadmaps while working autonomously to drive initiatives from concept to delivery. Cultivated lasting client relationships and translated unique customer needs into accurate, trusted and customized reporting.</p>
     <div class="actions">
       <a class="btn btn-primary" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
       <a class="btn btn-secondary" href="resume.pdf" download="Stephen-Behunin-Resume.pdf">Download PDF</a>
-      <a class="btn btn-secondary" href="mailto:stephenbehuninbusiness@gmail.com">Get in Touch</a>
-      <!-- EDIT ME: put your real LinkedIn URL below -->
-      <a class="btn btn-secondary" href="https://www.linkedin.com/in/YOUR-LINKEDIN-HERE" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-secondary" href="mailto:stephenbehuninwork@gmail.com">Email</a>
+      <a class="btn btn-secondary" href="https://www.linkedin.com/in/stephen-behunin/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </header>
-
   <section id="documents">
     <h2>Documents</h2>
     <ul class="doc-list">
-
       <li>
         <a href="resume.pdf" target="_blank" rel="noopener">
           <span class="doc-name">Resume</span>
           <span class="doc-meta">PDF</span>
         </a>
       </li>
-
+      <li>
+        <a href="recommendation.pdf" target="_blank" rel="noopener">
+          <span>
+            <span class="doc-name">Letter of Recommendation</span>
+            <span class="doc-sub">Darin Johnson &mdash; CEO, Healthicity</span>
+          </span>
+          <span class="doc-meta">PDF</span>
+        </a>
+      </li>
       <!-- ============================================================
            TO ADD A NEW DOCUMENT:
            1. Upload the file to this repository (Add file -> Upload files).
               Use a simple name with no spaces, e.g. cover-letter.pdf
            2. Copy the <li>...</li> block below, remove the comment marks,
               and change the href and the name to match your file.
-
       <li>
         <a href="cover-letter.pdf" target="_blank" rel="noopener">
           <span class="doc-name">Cover Letter</span>
           <span class="doc-meta">PDF</span>
         </a>
       </li>
-
            ============================================================ -->
-
     </ul>
   </section>
-
   <footer>
-    <p>&copy; 2026 Stephen Behunin &middot; <a href="mailto:stephenbehuninbusiness@gmail.com">stephenbehuninbusiness@gmail.com</a></p>
+    <p>&copy; 2026 Stephen Behunin &middot; <a href="mailto:stephenbehuninwork@gmail.com">stephenbehuninwork@gmail.com</a></p>
   </footer>
-
 </div>
-
 </body>
 </html>
