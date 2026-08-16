@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stephen Behunin — Resume</title>
+<meta name="description" content="Stephen Behunin — resume and professional documents.">
+<style>
+  :root {
+    --ink: #1a1f2b;
+    --ink-soft: #5a6272;
+    --line: #e6e8ee;
+    --accent: #2456d6;
+    --accent-dark: #1a41a8;
+    --bg: #ffffff;
+    --bg-soft: #f7f8fa;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  header {
+    padding: 88px 0 40px;
+  }
+  h1 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+  .tagline {
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    max-width: 52ch;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.15s ease, border-color 0.15s ease;
+    border: 1px solid transparent;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+  }
+  .btn-primary:hover { background: var(--accent-dark); }
+  .btn-secondary {
+    background: var(--bg);
+    color: var(--ink);
+    border-color: var(--line);
+  }
+  .btn-secondary:hover { border-color: var(--ink-soft); }
+  section {
+    padding: 36px 0;
+    border-top: 1px solid var(--line);
+  }
+  h2 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+  }
+  .doc-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .doc-list a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 18px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--bg);
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .doc-list a:hover {
+    border-color: var(--accent);
+    background: var(--bg-soft);
+  }
+  .doc-name { font-weight: 600; font-size: 0.98rem; }
+  .doc-meta {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+  footer {
+    padding: 40px 0 64px;
+    border-top: 1px solid var(--line);
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+  footer a { color: var(--ink-soft); }
+  @media (max-width: 480px) {
+    header { padding-top: 56px; }
+    h1 { font-size: 1.7rem; }
+    .actions { flex-direction: column; }
+    .btn { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <h1>Stephen Behunin</h1>
+    <!-- EDIT ME: replace the line below with a sentence or two about who you
+         are and what you do, e.g. "Operations professional with 8 years of
+         experience in logistics and team leadership." -->
+    <p class="tagline">Welcome — you can view my resume and other professional documents below.</p>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
+      <a class="btn btn-secondary" href="resume.pdf" download="Stephen-Behunin-Resume.pdf">Download PDF</a>
+      <a class="btn btn-secondary" href="mailto:stephenbehuninbusiness@gmail.com">Get in Touch</a>
+      <!-- EDIT ME: put your real LinkedIn URL below -->
+      <a class="btn btn-secondary" href="https://www.linkedin.com/in/YOUR-LINKEDIN-HERE" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
+
+  <section id="documents">
+    <h2>Documents</h2>
+    <ul class="doc-list">
+
+      <li>
+        <a href="resume.pdf" target="_blank" rel="noopener">
+          <span class="doc-name">Resume</span>
+          <span class="doc-meta">PDF</span>
+        </a>
+      </li>
+
+      <!-- ============================================================
+           TO ADD A NEW DOCUMENT:
+           1. Upload the file to this repository (Add file -> Upload files).
+              Use a simple name with no spaces, e.g. cover-letter.pdf
+           2. Copy the <li>...</li> block below, remove the comment marks,
+              and change the href and the name to match your file.
+
+      <li>
+        <a href="cover-letter.pdf" target="_blank" rel="noopener">
+          <span class="doc-name">Cover Letter</span>
+          <span class="doc-meta">PDF</span>
+        </a>
+      </li>
+
+           ============================================================ -->
+
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Stephen Behunin &middot; <a href="mailto:stephenbehuninbusiness@gmail.com">stephenbehuninbusiness@gmail.com</a></p>
+  </footer>
+
+</div>
+
+</body>
+</html>
